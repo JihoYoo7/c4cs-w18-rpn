@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 
+import operator
 operator = {
 	'+': operator.add,
 	'-': operator.sub,
 	'*': operator.mul,
 	'/':operator.truediv,
 }
-def calculate(arg):
+def calculate(myarg):
 	stack =list()
 	for token in myarg.split():
 		try:
