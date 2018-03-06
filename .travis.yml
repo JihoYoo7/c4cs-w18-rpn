@@ -5,8 +5,11 @@ install:
  - pip install termcolor
  - pip install python-coveralls
  - pip install coverage
+ - pip install coveralls
+ - pip install pytest-cov
 script:
  - make test
  - coverage run test_rpn.py
+ - py.test --cov-report= --cov=myproj tests/
 after_sucess: 
  - coveralls
