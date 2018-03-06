@@ -5,12 +5,9 @@ install:
  - pip install termcolor
  - pip install python-coveralls
  - pip install coverage
- - pip install -e . --use-mirrors
-before_script:
- - pip install -r test_requirements.txt --use-mirrors
 script:
  - coverage run test_rpn.py
- - py.test coveralls/tests.py --doctest-modules --pep8 coveralls -v --cov coveralls --cov-report term-missing
+ - py.test coveralls/tests.py --cov coveralls
  - make test
 after_success:
  - coveralls
