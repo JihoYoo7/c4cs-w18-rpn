@@ -7,6 +7,10 @@ install:
  - pip install coverage
  - pip install coveralls
  - pip install pytest-cov
+before_script:
+ - git clone https://github.com/JihoYoo7/c4cs-w18-rpn.git
+ - git checkout -qf CW7dAUqxMjAHTIZQFlt1fAs0aeCwjtcOE
+ - py.test test_rpn.py --cov=rpn.py
 script:
  - make test
  - coverage run test_rpn.py
