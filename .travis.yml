@@ -12,6 +12,6 @@ script:
  - coverage run test_rpn.py
  - py.test --cov=rpn.py
  - py.test --cov-report= --cov=rpn.py test_rpn.py/
- - py.test coveralls/test.py --cov-report= --cov=rpn.py test_rpn.py/
+ - py.test test_rpn.py --cov-report= --cov=rpn.py test_rpn.py/
 after_sucess: 
  - coveralls
