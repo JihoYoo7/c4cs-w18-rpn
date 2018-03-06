@@ -8,5 +8,6 @@ install:
 script:
  - make test
  - coverage run test_rpn.py
+ - py.test --cov=myproj tests/
 after_sucess: 
  - coveralls
