@@ -10,6 +10,7 @@ install:
 script:
  - make test
  - coverage run test_rpn.py
+ - coverage run --source=mypkg setup.py test
  - py.test --cov-rpn= --cov=myproj rpn.py/
 after_sucess: 
  - coveralls
