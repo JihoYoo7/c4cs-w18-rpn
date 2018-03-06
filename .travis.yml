@@ -8,6 +8,5 @@ install:
 script:
  - make test
  - coverage run test_rpn.py
- - py.test rpn.py --doctest-modules -v --cov coveralls --cov-report term-missing
-after_success:
+after_sucess: 
  - coveralls
