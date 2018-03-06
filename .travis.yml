@@ -12,4 +12,4 @@ script:
  - coverage run test_rpn.py
  - py.test --cov=rpn.py
 after_sucess: 
- - coveralls
+ - coveralls --rpn.py=coverage.xml
