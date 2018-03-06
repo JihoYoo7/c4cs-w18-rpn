@@ -3,17 +3,10 @@ python:
  - 3.5
 install:
  - pip install termcolor
- - pip install -U pip
- - python setup.py develop
-before_script:
- - pip install -r test_requirements.txt
- - git clone https://github.com/z4r/python-coveralls-example.git
- - cd python-coveralls-example
- - git checkout -qf 3e82fd5159b84bebe9bc6c9fd3959f322e6f7098
- - py.test example/tests.py --cov=example
- - cd -
+ - pip install python-coveralls
+ - pip install coverage
 script:
+ - coverage run test_rpn.py
  - make test
- - py.test coveralls/tests.py --doctest-modules --pep8 coveralls -v --cov coveralls --cov-report term-missing
 after_success:
  - coveralls
