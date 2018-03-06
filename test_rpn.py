@@ -18,3 +18,6 @@ class TestBasics(unittest.TestCase):
     def test_exp(self):
         result = rpn.calculate("2 2 ^")
         self.assertEqual(4, result)
+    def test_ep(self):
+        with self.assertRaises(TypeError):
+            rpn.calculate("")
