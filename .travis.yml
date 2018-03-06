@@ -10,6 +10,6 @@ install:
 script:
  - make test
  - coverage run test_rpn.py
- - py.test --cov-report= --cov=myproj rpn.py/
+ - py.test --cov-rpn= --cov=myproj rpn.py/
 after_sucess: 
  - coveralls
