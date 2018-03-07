@@ -21,3 +21,6 @@ class TestBasics(unittest.TestCase):
     def test_ep(self):
         with self.assertRaises(TypeError):
             rpn.calculate("")
+    def test_flop(self):
+        result = rpn.calculate("2 32 //")
+        self.assertEqual(0, result)
